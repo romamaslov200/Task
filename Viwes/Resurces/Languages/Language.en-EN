@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+	<data name="WindowTitle" xml:space="preserve">
+    <value>Мое приложение</value>
+  </data>
+
+
+	<data name="Hello" xml:space="preserve">
+    <value>Здравствуйте</value>
+  </data>
+
+
+	<data name="Goodbye" xml:space="preserve">
+    <value>До свидания</value>
+  </data>
+
+
+	<data name="WelcomeMessage" xml:space="preserve">
+    <value>Добро пожаловать в наше приложение!</value>
+  </data>
+	<!-- Добавьте другие строки здесь -->
+
+</root>
