@@ -34,6 +34,12 @@ namespace Task.Models
                 case 3:
                     taskCommand.task3(page);
                     break;
+                case 4:
+                    taskCommand.task4(page);
+                    break;
+                case 5:
+                    taskCommand.task5(page);
+                    break;
                 default:
                     MessageBox.Show(i.ToString());
                     break;

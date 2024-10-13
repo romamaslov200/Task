@@ -135,9 +135,83 @@ namespace Task.Models
                     MessageBox.Show($"Ошибка при загрузке страницы: {e.Message}");
                 }
             }
+        }
+
+        public void task4(Page page)
+        {
+            TextBox input_TextBox = FindElement<TextBox>("input_TextBox", page);
+            TextBlock TextBlock1 = FindElement<TextBlock>("TextBlock1", page);
+
+            int[] ar;
+            Random rnd = new Random();
+
+            int result;
+
+            if (int.TryParse(input_TextBox.Text, out result))
+            {
 
 
+                TextBlock1.Text = "";
+                ar = new int[result];
 
+                for (int i = 0; i < ar.Length; i++)
+                {
+                    ar[i] = rnd.Next(1,1000);
+                }
+
+                Array.Sort(ar);
+                Array.Reverse(ar);
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+                    TextBlock1.Text += $"{ar[i]}\n";
+                }
+            }
+            else
+            {
+                TextBlock1.Text = "Еблан напиши цифру!";
+            }
+        }
+
+        public void task5(Page page)
+        {
+            TextBox input_TextBox = FindElement<TextBox>("input_TextBox", page);
+            TextBlock TextBlock1 = FindElement<TextBlock>("TextBlock1", page);
+
+            int[] ar;
+            Random rnd = new Random();
+
+            int result;
+
+            if (int.TryParse(input_TextBox.Text, out result))
+            {
+
+                TextBlock1.Text = "";
+                ar = new int[result];
+
+                int h = 0;
+                int nh = 0;
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+                    ar[i] = rnd.Next(1, 1000);
+
+                    if ((ar[i] % 2) == 0) { h++; }
+                    else { nh++; }
+                }
+
+                TextBlock1.Text = $"Чётных чисел в масиве - {h}\nНе чётных чисел в масиве - {nh}\n\nДанные масива\n";
+
+                foreach (var item in ar)
+                {
+                    TextBlock1.Text += $"{item}\n";
+                }
+
+            }
+            else
+            {
+                TextBlock1.Text = "Еблан напиши цифру!";
+            }
         }
     }
 }

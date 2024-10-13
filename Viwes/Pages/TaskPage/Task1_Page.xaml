@@ -95,14 +95,14 @@
                     
                     <RadioButton Name="option4"
                                  Foreground="#FFF"
-                                 Content="Вариант 4"
+                                 Content="Сортировка по убыванию"
                                  Tag="4"
                                  GroupName="Options"
                                  Checked="RadioButton_Checked"/>
                     
                     <RadioButton Name="option5"
                                  Foreground="#FFF"
-                                 Content="Вариант 5"
+                                 Content="Узнать сколько чотных и нечотных элементов в масиве"
                                  Tag="5"
                                  GroupName="Options"
                                  Checked="RadioButton_Checked"/>
