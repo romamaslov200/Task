@@ -107,6 +107,19 @@
                                  GroupName="Options"
                                  Checked="RadioButton_Checked"/>
 
+                    <RadioButton Name="option6"
+                                 Foreground="#FFF"
+                                 Content="Определение индекса из наибольшего из нечотного значения"
+                                 Tag="6"
+                                 GroupName="Options"
+                                 Checked="RadioButton_Checked"/>
+
+                    <RadioButton Name="option7"
+                                 Foreground="#FFF"
+                                 Content="Узнать разность между чотными и не чотными индексами масива"
+                                 Tag="7"
+                                 GroupName="Options"
+                                 Checked="RadioButton_Checked"/>
 
                 </StackPanel>
 

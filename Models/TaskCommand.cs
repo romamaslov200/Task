@@ -213,5 +213,112 @@ namespace Task.Models
                 TextBlock1.Text = "Еблан напиши цифру!";
             }
         }
+
+        public async void task6(Page page)
+        {
+            TextBox input_TextBox = FindElement<TextBox>("input_TextBox", page);
+            TextBlock TextBlock1 = FindElement<TextBlock>("TextBlock1", page);
+
+            int[] ar;
+            Random rnd = new Random();
+
+            int result;
+
+            if (int.TryParse(input_TextBox.Text, out result))
+            {
+                s:
+
+                TextBlock1.Text = "";
+                ar = new int[result];
+
+                int maxValue;
+                int maxIndex;
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+                    ar[i] = rnd.Next(1, 1000);
+                }
+
+                maxValue = ar.Max();
+                maxIndex = ar.ToList().IndexOf(maxValue);
+
+                TextBlock1.Text += $"Индекс наибольшего чесла - {maxIndex}\n\nДанные масива:\n";
+
+                foreach (var item in ar)
+                {
+                    TextBlock1.Text += $"{item}\n";
+                }
+                
+                
+                //await System.Threading.Tasks.Task.Delay(TimeSpan.FromMilliseconds(1));
+
+            }
+            else
+            {
+                TextBlock1.Text = "Еблан напиши цифру!";
+            }
+        }
+
+        public void task7(Page page)
+        {
+            TextBox input_TextBox = FindElement<TextBox>("input_TextBox", page);
+            TextBlock TextBlock1 = FindElement<TextBlock>("TextBlock1", page);
+
+            int[] ar;
+            Random rnd = new Random();
+
+            int result;
+
+            if (int.TryParse(input_TextBox.Text, out result))
+            {
+                if ((result % 2) == 0)
+                {
+                    TextBlock1.Text = "";
+                    ar = new int[result];
+
+                    int[] h = new int[result];
+                    int[] nh = new int[result];
+
+                    int idh = 0;
+                    int idnh = 0;
+
+                    for(int i = 0; i < ar.Length; i++)
+                    {
+                        ar[i] = rnd.Next(1, 1000);
+                    }
+
+                    for (int i = 0; i < ar.Length; i++)
+                    {
+                        ar[i] = rnd.Next(100, 1000);
+
+                        if ((ar[i] % 2) == 0) 
+                        {
+                            idh++;
+                            h[i] = ar[idh];
+                        }
+                        else 
+                        {
+                            idnh++;
+                            nh[i] = ar[idnh];
+                        }
+                    }
+                    MessageBox.Show($"{h.Length}");
+                    for (int i = 0; i < result/2; i++)
+                    {
+                        MessageBox.Show($"{i}");
+                        TextBlock1.Text += $"{h[i]} - {nh[i]} = {h[i] - nh[i]}\n";
+                    }
+                }
+                else
+                {
+                    TextBlock1.Text = "Еблан напиши чотную цифру!";
+                }
+            }
+            else
+            {
+                TextBlock1.Text = "Еблан напиши не цифру!";
+            }
+        }
+
     }
 }
